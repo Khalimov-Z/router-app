@@ -27,8 +27,8 @@ function Contact(props) {
                     <div className="col-12">
                         <div className="main-maps">
                             <YMaps  >
-                                <Map  style={style} defaultState={mapData}>
-                                    {coordinates.map(coordinate => <Placemark geometry={coordinate}/>)}
+                                <Map   style={style} defaultState={mapData}>
+                                    {coordinates.map((coordinate,index) => <span key={index}><Placemark geometry={coordinate}/> </span>)}
                                 </Map>
                             </YMaps>
                         </div>
